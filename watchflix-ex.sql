@@ -19,13 +19,13 @@
 													watch_date
 													watch_duration_in_minutes
 													
-													// the most important select 
+													//example of select 
 													select first_name, COUNT(*) AS 'count'
 													from users
 													group by first_name
 
 
-//i drugi
+//second to get payment
 
 SELECT pay_date AS 'day', 
 SUM(amount) AS 'total'
@@ -34,7 +34,7 @@ WHERE status = 'paid'
 GROUP BY day
 ORDER BY total DESC;
 
-//lub w wersji poczatkowej
+//previous version
 
 SELECT pay_date, SUM(amount)
 FROM payments
